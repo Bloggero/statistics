@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 
 use Carbon\Carbon;
+use App\Models\Setting;
 use App\Models\Statistic;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -18,6 +19,13 @@ class StatisticController extends Controller
      */
     public function index(Request $request)
     {
+
+        $updateInstaller = Setting::find(1);
+        if($updateInstaller['value'] == 'false'){
+            $updateInstaller->value = 'true';
+            $updateInstaller->save();
+        }
+        
         if(isset($request->type)){
             switch ($request->type) {
                 case 'post':
