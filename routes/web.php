@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return redirect('/admin/statistics');
+});
 
 
 require __DIR__.'/auth.php';
