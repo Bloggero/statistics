@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\Setting;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Auth\NewPasswordController;
@@ -14,22 +13,11 @@ use App\Http\Controllers\Auth\EmailVerificationNotificationController;
 
 Route::middleware('guest')->group(function () {
 
-    $updateInstaller = Setting::find(1);
-
-    if($updateInstaller['value'] == 'false'){
-        
         Route::get('register', [RegisteredUserController::class, 'create'])
     ->name('register');
 
         Route::post('register', [RegisteredUserController::class, 'store']);
     
-    }else{
-        Route::get('register', function(){
-            return 'Only one registered user';
-        });
-    }
-
-
     Route::get('login', [AuthenticatedSessionController::class, 'create'])
                 ->name('login');
 
