@@ -12,7 +12,9 @@ With this system, you can:
 ![](https://i.imgur.com/vJ18i48h.png)
 ![](https://i.imgur.com/XxuFdE3h.png)
 ![](https://i.imgur.com/IOqKhGuh.png)
-![](https://i.imgur.com/bHxdTGbh.png)
+
+http://i.imgur.com/bHxdTGbh.png
+
 This system is developed in PHP, MySql, Laravel 9 and Javascript, as well as HTML5, CSS3 and AdminLte v3 template.
 
 ## Installation
