@@ -253,7 +253,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'admin/dashboard',
+    'dashboard_url' => 'admin/statistics',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',

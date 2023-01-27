@@ -68,10 +68,9 @@ class RegisterController extends Controller
 
         $updateInstaller = Setting::find(1);
 
-        if($updateInstaller['value'] == 'true'){
+        if ($updateInstaller['value'] == 'true') {
             return 'Only one registered user';
         }
-    
 
         return User::create([
             'name' => $data['name'],

@@ -45,6 +45,14 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
+
+        
+    $updateInstaller = Setting::find(1);
+
+    if($updateInstaller['value'] == 'true'){
+        return 'Only one registered user';
+    }
+
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
