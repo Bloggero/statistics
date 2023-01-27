@@ -13,7 +13,8 @@
         "laravel/tinker": "^2.7",
         "laravel/ui": "^4.2",
         "pestphp/pest": "^1.16",
-        "pestphp/pest-plugin-laravel": "^1.1"
+        "pestphp/pest-plugin-laravel": "^1.1",
+        "rachidlaasri/laravel-installer": "^4.1"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
