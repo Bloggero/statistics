@@ -66,12 +66,11 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
 
-
         $updateInstaller = Setting::find(1);
 
-    if($updateInstaller['value'] == 'true'){
-        return 'Only one registered user';
-    }
+        if ($updateInstaller['value'] == 'true') {
+            return 'Only one registered user';
+        }
 
         return User::create([
             'name' => $data['name'],
